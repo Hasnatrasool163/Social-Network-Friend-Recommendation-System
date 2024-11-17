@@ -10,3 +10,5 @@ Key Features and Functions
         This feature helps create a real-time feed of user activities.
 
 ![DashboardPage](https://github.com/user-attachments/assets/5cf3989b-4808-452d-afc3-476860c5cd3b)
+
+Contact at hasnatrasool163@gmail.com for complete project with javafx gui frontend.
