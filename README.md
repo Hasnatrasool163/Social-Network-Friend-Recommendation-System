@@ -6,4 +6,7 @@ Key Features and Functions
         ◦ Delete Friends - Allow users to break friendships.
         ◦ Display Mutual Friends - Help users find mutual friends they share with another user.
         ◦ Suggest Potential Friends Based on Common Connections - Recommend friends-of-friends, as they are likely to have more in common and be open to forming new connections.
-        ◦ User Posting System- Allows users to make posts, which are stored and displayed in the order they were created, following an FCFS (queue-based) approach. This feature helps create a real-time feed of user activities.
+        ◦ User Posting System- Allows users to make posts, which are stored and displayed in the order they were created, following an FCFS (queue-based) approach.
+        This feature helps create a real-time feed of user activities.
+
+![DashboardPage](https://github.com/user-attachments/assets/5cf3989b-4808-452d-afc3-476860c5cd3b)
