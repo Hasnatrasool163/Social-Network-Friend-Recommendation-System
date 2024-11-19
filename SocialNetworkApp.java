@@ -1,7 +1,11 @@
-// package org.example.dsassignment3_4.view;
+// author : Muhammad Hasnat Rasool
+// 17 / 11 / 24
+
+package org.example.dsassignment3_4.view;
 
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /*
  * Project Requirements:
@@ -21,6 +25,8 @@ class User implements Serializable{
     private static final long serialVersionUID = 1L;
 
     private String userId;
+    private int inDegree = 0; // incoming connections
+    private int outDegree = 0; // outgoing connections
     private String name;
     private Set<User> friends;
     private Queue<String> posts;
@@ -103,6 +109,50 @@ class User implements Serializable{
         posts.offer(post);
     }
 
+    /**
+     * Method that provides in-degree connections for a user
+     * @return in-degree connections
+     */
+    public int getInDegree() {
+        return inDegree;
+    }
+
+    /**
+     * Method that provides out-degree connections for a user
+     * @return out-degree connections
+     */
+    public int getOutDegree() {
+        return outDegree;
+    }
+
+    /**
+     * Method that increment in-degree connections for a user
+     */
+    public void incrementInDegree() {
+        inDegree++;
+    }
+
+    /**
+     * Method that increment out-degree connections for a user
+     */
+    public void incrementOutDegree() {
+        outDegree++;
+    }
+
+    /**
+     * Method that decrement in-degree connections for a user
+     */
+    public void decrementInDegree() {
+        inDegree = Math.max(0, inDegree - 1);
+    }
+
+    /**
+     * Method that decrement out-degree connections for a user
+     */
+    public void decrementOutDegree() {
+        outDegree = Math.max(0, outDegree - 1);
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -134,7 +184,7 @@ class SocialNetworkGraph {
      */
     public SocialNetworkGraph() {
         if (!loadData()) {
-            this.users = new HashMap<>(); // Initialize a new map if no data is loaded.
+            this.users = new HashMap<>();
         }
     }
 
@@ -209,6 +259,8 @@ class SocialNetworkGraph {
         }
 
         user1.addFriend(user2);
+        user1.incrementOutDegree();
+        user2.incrementInDegree();
         System.out.println("Friendship created between " + user1.getName() + " and " + user2.getName());
         saveData();
     }
@@ -234,6 +286,8 @@ class SocialNetworkGraph {
         }
 
         user1.removeFriend(user2);
+        user1.decrementOutDegree();
+        user2.decrementInDegree();
         System.out.println("Friendship removed between " + user1.getName() + " and " + user2.getName());
         saveData();
     }
@@ -277,20 +331,48 @@ class SocialNetworkGraph {
             return Set.of();
         }
 
-        Set<User> suggestions = new HashSet<>();
+        // Map to track potential friends and their scores
+        Map<User, Integer> recommendationScores = new HashMap<>();
+
+        // Traverse the direct friends of the user
         for (User friend : user.getFriends()) {
-            for (User friendOfFriend : friend.getFriends()) {
-                if (!user.getFriends().contains(friendOfFriend) && !friendOfFriend.equals(user)) {
-                    suggestions.add(friendOfFriend);
+            // Traverse friends of friends
+            for (User potentialFriend : friend.getFriends()) {
+                // Skip the user itself and already connected friends
+                if (!potentialFriend.equals(user) && !user.getFriends().contains(potentialFriend)) {
+                    // Increment score based on mutual friends
+                    recommendationScores.put(
+                            potentialFriend,
+                            recommendationScores.getOrDefault(potentialFriend, 0) + 1
+                    );
                 }
             }
         }
 
-        if (suggestions.isEmpty()) {
-            System.out.println("No friend suggestions available.");
-        }
-        return suggestions;
+        // Rank recommendations by:
+        // 1. Number of mutual friends (descending)
+        // 2. Total connections of the potential friend (degree, descending)
+        // 3. Lexicographical order of userId (ascending) for tie-breaking
+        return recommendationScores.entrySet().stream()
+                .sorted((entry1, entry2) -> {
+                    int mutualComparison = entry2.getValue().compareTo(entry1.getValue());
+                    if (mutualComparison != 0) {
+                        return mutualComparison; // More mutual friends first
+                    }
+
+                    int degree1 = entry1.getKey().getFriends().size();
+                    int degree2 = entry2.getKey().getFriends().size();
+                    if (degree1 != degree2) {
+                        return Integer.compare(degree2, degree1); // Higher degree first
+                    }
+
+                    return entry1.getKey().getUserId().compareTo(entry2.getKey().getUserId());
+                })
+                .map(Map.Entry::getKey)
+                .limit(5) // Limit to top 5 recommendations
+                .collect(Collectors.toSet());
     }
+
 
     /**
      * Displays all users in the social network.
