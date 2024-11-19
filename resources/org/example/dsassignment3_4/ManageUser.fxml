@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="660.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dsassignment3_4.controller.ManageUsersController">
+   <children>
+      <Pane prefHeight="660.0" prefWidth="300.0" style="-fx-background-color: #132431;">
+         <children>
+            <Label layoutX="96.0" layoutY="77.0" text="Enter UserName:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="96.0" layoutY="160.0" text="Enter Email:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="97.0" layoutY="266.0" text="Enter Password:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="99.0" layoutY="371.0" text="Select DOB:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="98.0" layoutY="464.0" text="Choose Gender:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameField" layoutX="96.0" layoutY="120.0" />
+            <TextField fx:id="emailField" layoutX="96.0" layoutY="213.0" />
+            <ComboBox fx:id="genderComboBox" layoutX="96.0" layoutY="512.0" prefHeight="26.0" prefWidth="161.0" />
+            <DatePicker fx:id="dobField" layoutX="92.0" layoutY="412.0" prefHeight="26.0" prefWidth="161.0" />
+            <PasswordField fx:id="passwordField" layoutX="90.0" layoutY="316.0" />
+            <Label layoutX="32.0" layoutY="124.0">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" size="2.5em" />
+               </graphic>
+            </Label>
+            <Label layoutX="32.0" layoutY="202.0">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="ENVELOPE" size="2.5em" />
+               </graphic>
+            </Label>
+            <Label layoutX="32.0" layoutY="305.0">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="LOCK" size="2.5em" />
+               </graphic>
+            </Label>
+            <Label layoutX="34.0" layoutY="486.0">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="MALE" size="2.5em" />
+               </graphic>
+            </Label>
+            <Label layoutX="32.0" layoutY="393.0">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CALENDAR" size="2.5em" />
+               </graphic>
+            </Label>
+            <Button layoutX="38.0" layoutY="577.0" mnemonicParsing="false" onAction="#addUserRecord" prefHeight="31.0" prefWidth="57.0" style="-fx-background-color: SKyBlue;" text="Add" textFill="#132431">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="114.0" layoutY="577.0" mnemonicParsing="false" onAction="#updateUserRecord" style="-fx-background-color: SKyBlue;" text="Update" textFill="#132431">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="206.0" layoutY="577.0" mnemonicParsing="false" onAction="#deleteUserRecord" style="-fx-background-color: SKyBlue;" text="Delete" textFill="#132431">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="114.0" layoutY="620.0" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: SKyBlue;" text="Clear" textFill="#132431">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="statusLabel" layoutX="33.0" layoutY="36.0" prefHeight="18.0" prefWidth="243.0" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label layoutX="564.0" layoutY="85.0" text="Manage Users" textFill="#132431">
+         <graphic>
+            <FontAwesomeIcon glyphName="USER_PLUS" size="3em" />
+         </graphic>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="489.0" layoutY="163.0" maxHeight="5.0" minHeight="5.0" prefHeight="5.0" prefWidth="340.0" style="-fx-background-color: #132431;" text="Label" />
+      <TableView fx:id="usersTable" layoutX="349.0" layoutY="253.0" prefHeight="342.0" prefWidth="609.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="67.0" style="-fx-background-color: skyblue;" text="ID" />
+          <TableColumn fx:id="usernameColumn" prefWidth="93.0" style="-fx-background-color: skyblue;" text="UserName" />
+            <TableColumn fx:id="emailColumn" prefWidth="114.0" style="-fx-background-color: skyblue;" text="Email" />
+            <TableColumn fx:id="passwordColumn" prefWidth="109.0" style="-fx-background-color: SKyBlue; -fx-header-color: white; -fx-title-color: white;" text="Password" />
+            <TableColumn fx:id="dobColumn" prefWidth="122.0" style="-fx-background-color: skyblue;" text="DOB" />
+            <TableColumn fx:id="genderColumn" prefWidth="103.0" style="-fx-background-color: skyblue;" text="Gender" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

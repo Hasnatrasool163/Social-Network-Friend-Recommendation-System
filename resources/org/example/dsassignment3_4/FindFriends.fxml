@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #132431;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dsassignment3_4.FindFriendsController">
+   <children>
+      <ListView layoutX="77.0" layoutY="191.0" prefHeight="200.0" prefWidth="464.0" />
+      <CheckBox layoutX="120.0" layoutY="54.0" mnemonicParsing="false" text="Age-Group" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="367.0" layoutY="54.0" mnemonicParsing="false" text="Location" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="120.0" layoutY="117.0" mnemonicParsing="false" text="Hobbies" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="367.0" layoutY="117.0" mnemonicParsing="false" text="Education" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="195.0" layoutY="14.0" text="Select Filters to Find Perfect Match" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="278.0" layoutY="151.0" mnemonicParsing="false" style="-fx-background-color: SkyBlue;" text="Find" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

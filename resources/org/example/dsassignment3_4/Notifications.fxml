@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dsassignment3_4.NotificationsController" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #f4f4f4; -fx-padding: 10;">
+    <children>
+        <Button fx:id="notificationsButton" text="Notifications" style="-fx-background-color: #132431; -fx-text-fill: white; -fx-font-size: 14px;" onAction="#toggleNotifications"/>
+        <VBox fx:id="notificationsList" prefWidth="250.0" visible="false" style="-fx-background-color: white; -fx-border-radius: 10px; -fx-border-color: #ddd; -fx-padding: 10;">
+            <children>
+                <Label text="Announcement: New update coming soon!" style="-fx-font-size: 14px;"/>
+                <Label text="Message from Admin: Please check your tasks!" style="-fx-font-size: 14px;"/>
+                <Label text="Notification: Server maintenance scheduled." style="-fx-font-size: 14px;"/>
+            </children>
+        </VBox>
+    </children>
+</VBox>

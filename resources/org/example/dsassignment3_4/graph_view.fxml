@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.dsassignment3_4.GraphController" prefWidth="800.0" prefHeight="600.0">
+    <Label text="Friend Connections" layoutX="350" layoutY="20">
+        <font>
+            <Font name="Arial Bold" size="20" />
+        </font>
+    </Label>
+
+    <Pane fx:id="graphPane" layoutX="100" layoutY="60" prefWidth="600.0" prefHeight="500.0" style="-fx-background-color: lightblue; -fx-border-color: gray;">
+    </Pane>
+
+    <VBox layoutX="20" layoutY="60" spacing="10">
+        <Label text="Legend" />
+        <HBox spacing="10">
+            <Circle radius="10" fill="#4CAF50"/>
+            <Label text="User 1"/>
+        </HBox>
+        <HBox spacing="10">
+            <Circle radius="10" fill="#2196F3"/>
+            <Label text="User 2"/>
+        </HBox>
+        <HBox spacing="10">
+            <Circle radius="10" fill="#FF5722"/>
+            <Label text="User 3"/>
+        </HBox>
+        <HBox spacing="10">
+            <Circle radius="10" fill="#FFC107"/>
+            <Label text="User 4"/>
+        </HBox>
+        <HBox spacing="10">
+            <Circle radius="10" fill="#9C27B0"/>
+            <Label text="User 5"/>
+        </HBox>
+    </VBox>
+
+    <HBox layoutX="100" layoutY="570" spacing="10">
+        <Button text="Add Friend" onAction="#handleAddFriend" />
+        <Button text="Remove Friend" onAction="#handleRemoveFriend" />
+        <Button text="Refresh" onAction="#handleRefresh" />
+    </HBox>
+</AnchorPane>

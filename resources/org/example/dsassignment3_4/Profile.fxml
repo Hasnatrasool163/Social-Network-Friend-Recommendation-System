@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane style="-fx-background-color: #132431;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dsassignment3_4.ProfileController">
+    <children>
+        <VBox alignment="CENTER" prefWidth="400.0" spacing="20.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="50.0">
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@Images/logo.png" />
+                </image>
+            </ImageView>
+
+            <HBox alignment="CENTER" spacing="10.0">
+                <Circle fx:id="statusCircle" fill="#00ff24" radius="5.0" />
+                <Label fx:id="usernameLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Username" textFill="white" />
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="10.0">
+                <Label style="-fx-font-size: 14px;" text="Total Friends:" textFill="lightgray" />
+                <Label fx:id="totalFriendsLabel" style="-fx-font-size: 14px;" text="5" textFill="white" />
+            </HBox>
+
+            <VBox alignment="CENTER" spacing="5.0" style="-fx-background-color: #1d3557; -fx-background-radius: 10px; -fx-padding: 15;">
+                <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Basic Information" textFill="lightblue" />
+                <Label fx:id="emailLabel" style="-fx-font-size: 14px;" text="Email: hasnatrasool163@gmail.com" textFill="white" />
+                <Label fx:id="dobLabel" style="-fx-font-size: 14px;" text="Date of Birth: 13/10/2006" textFill="white" />
+                <Label fx:id="genderLabel" style="-fx-font-size: 14px;" text="Gender: Male" textFill="white" />
+                <Label fx:id="locationLabel" style="-fx-font-size: 14px;" text="Punjab, Lahore" textFill="white" />
+            </VBox>
+
+            <HBox alignment="CENTER" spacing="15.0">
+                <Button onAction="#editProfile" style="-fx-background-color: #457b9d; -fx-text-fill: white; -fx-background-radius: 10px;" text="Edit Profile" />
+                <Button onAction="#logout" style="-fx-background-color: #e63946; -fx-text-fill: white; -fx-background-radius: 10px;" text="Logout" />
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

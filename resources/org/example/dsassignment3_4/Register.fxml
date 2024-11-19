@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" style="-fx-background-color: #132431;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dsassignment3_4.RegisterController">
+    <children>
+        <Pane layoutX="128.0" layoutY="40.0" prefHeight="570.0" prefWidth="339.0" style="-fx-background-color: skyblue;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="40.0">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="32.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@Images/logo.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="37.0" layoutY="235.0" text="UserName:">
+                    <effect>
+                        <Blend mode="BLUE" />
+                    </effect>
+                </Label>
+                <TextField fx:id="usernameField" layoutX="115.0" layoutY="231.0" prefHeight="26.0" prefWidth="161.0" promptText="Enter UserName" />
+                <Label layoutX="37.0" layoutY="325.0" text="Password:">
+                    <effect>
+                        <Blend mode="BLUE" />
+                    </effect>
+                </Label>
+                <PasswordField fx:id="passwordField" layoutX="114.0" layoutY="323.0" promptText="Enter Password" />
+                <Button blendMode="SRC_ATOP" layoutX="38.0" layoutY="496.0" mnemonicParsing="false" onAction="#switchToLoginScene" prefHeight="26.0" prefWidth="274.0" style="-fx-background-color: skyblue; -fx-background-radius: 10px;" text="Already Have An Account?" textFill="WHITE">
+                    <effect>
+                        <DropShadow height="23.97" radius="12.225" spread="0.36" width="26.93">
+                            <color>
+                                <Color red="0.09868421405553818" green="0.5592105388641357" blue="0.7894737124443054" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Button>
+                <Label fx:id="statusLabel" layoutX="64.0" layoutY="201.0" prefHeight="18.0" prefWidth="210.0" textFill="WHITE" />
+                <Button layoutX="26.0" layoutY="449.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="26.0" prefWidth="294.0" style="-fx-background-color: #132431; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Register" textFill="WHITE">
+                    <effect>
+                        <DropShadow height="23.97" radius="12.225" spread="0.36" width="26.93">
+                            <color>
+                                <Color red="0.09868421405553818" green="0.5592105388641357" blue="0.7894737124443054" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Button>
+                <Label layoutX="159.0" layoutY="538.0" text="FC">
+                    <effect>
+                        <Bloom threshold="0.0" />
+                    </effect>
+                </Label>
+            <Label layoutX="60.0" layoutY="279.0" text="Email:">
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+            </Label>
+            <TextField fx:id="emailField" layoutX="113.0" layoutY="275.0" prefHeight="26.0" prefWidth="161.0" promptText="Enter Email" />
+            <Label layoutX="64.0" layoutY="369.0" text="DOB:">
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+            </Label>
+            <DatePicker fx:id="dobField" layoutX="112.0" layoutY="365.0" prefHeight="26.0" prefWidth="161.0" promptText="Select Date of Birth" />
+            <Label layoutX="53.0" layoutY="409.0" text="Gender:">
+               <effect>
+                  <Blend mode="BLUE" />
+               </effect>
+            </Label>
+            <ComboBox fx:id="genderComboBox" editable="true" layoutX="112.0" layoutY="406.0" prefHeight="26.0" prefWidth="161.0" promptText="Select Gender" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

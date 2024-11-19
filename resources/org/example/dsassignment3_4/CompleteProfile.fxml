@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #132431;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dsassignment3_4.CompleteProfileController">
+   <children>
+      <Label layoutX="219.0" layoutY="53.0" text="Welcome :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="progressBar" layoutX="223.0" layoutY="105.0" prefWidth="200.0" progress="0.53" />
+      <Label layoutX="129.0" layoutY="104.0" text="Completed" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="userName" layoutX="307.0" layoutY="53.0" text="hasnatrasool163" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="ageGroupComboBox" layoutX="139.0" layoutY="168.0" prefWidth="150.0" promptText="Age-Group" />
+      <Label layoutX="44.0" layoutY="171.0" text="Age-Group:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="locationComboBox" layoutX="138.0" layoutY="228.0" prefWidth="150.0" promptText="Location" />
+      <Label layoutX="44.0" layoutY="231.0" text="Location:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="171.0" text="Hobbies:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="hobbiesComboBox" layoutX="410.0" layoutY="168.0" prefWidth="150.0" promptText="Hobbies" />
+      <Label layoutX="316.0" layoutY="231.0" text="Education:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="educationComboBox" layoutX="410.0" layoutY="228.0" prefWidth="150.0" promptText="Education" />
+      <Label layoutX="50.0" layoutY="287.0" text="Extra's:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="extrasComboBox" layoutX="138.0" layoutY="284.0" prefWidth="150.0" promptText="Extra's" />
+      <Button fx:id="updateButton" layoutX="286.0" layoutY="354.0" mnemonicParsing="false" style="-fx-background-color: SkyBlue;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

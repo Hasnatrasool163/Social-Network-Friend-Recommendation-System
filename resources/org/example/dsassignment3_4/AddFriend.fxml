@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="10" stylesheets="style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <Label text="Add Friend" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+    <TextField fx:id="searchUserField" promptText="Enter Username to Add" />
+    <Button text="Send Friend Request" onAction="#handleAddFriend" />
+</VBox>

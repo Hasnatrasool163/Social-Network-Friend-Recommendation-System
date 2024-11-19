@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dsassignment3_4.NotificationDialogController"
+      style="-fx-background-color: white; -fx-border-radius: 10px; -fx-border-color: #ddd; -fx-padding: 10;" prefWidth="300.0" prefHeight="250.0">
+    <children>
+        <Label fx:id="notificationTitle" text="Notifications" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        <Separator />
+        <Label fx:id="notificationMessage1" text="Announcement: New update coming soon!" style="-fx-font-size: 14px;"/>
+        <Label fx:id="notificationMessage2" text="Message from Admin: Please check your tasks!" style="-fx-font-size: 14px;"/>
+        <Label fx:id="notificationMessage3" text="Notification: Server maintenance scheduled." style="-fx-font-size: 14px;"/>
+        <Separator />
+        <Button text="Close" onAction="#closeNotification" style="-fx-background-color: #132431; -fx-text-fill: white; -fx-font-size: 14px;" />
+    </children>
+</VBox>

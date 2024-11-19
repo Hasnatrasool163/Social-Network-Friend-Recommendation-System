@@ -1,0 +1,16 @@
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.text-field {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);
+    -fx-border-color: #3498db;
+}

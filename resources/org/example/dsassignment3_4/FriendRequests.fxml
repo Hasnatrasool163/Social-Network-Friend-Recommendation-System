@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="10" stylesheets="style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <Label text="Friend Requests" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+    <ListView fx:id="friendRequestsListView" prefHeight="200" prefWidth="300" />
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Accept" onAction="#acceptFriendRequest" />
+        <Button text="Reject" onAction="#rejectFriendRequest" />
+    </HBox>
+</VBox>
