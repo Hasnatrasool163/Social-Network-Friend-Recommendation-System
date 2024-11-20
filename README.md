@@ -50,5 +50,7 @@ Scalable Design: Can be expanded to include more advanced features like communit
 
 Build your own Social Network Friend Recommendation System and dive into the world of graph theory, algorithms, and real-world problem-solving! 🚀
 ![DashboardPage](https://github.com/user-attachments/assets/5cf3989b-4808-452d-afc3-476860c5cd3b)
+![Splash](https://github.com/user-attachments/assets/ac9e5b73-031c-48fe-8cc3-b6b4c5f3bbbb)
+
 
 Contact at hasnatrasool163@gmail.com for complete project with javafx gui frontend.
