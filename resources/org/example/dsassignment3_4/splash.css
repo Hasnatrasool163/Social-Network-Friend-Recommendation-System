@@ -1,0 +1,11 @@
+.splash-pane {
+    -fx-background-color: linear-gradient(to bottom, #141E30, #243B55);
+    -fx-fill: #132431;
+}
+
+.title-label {
+    -fx-font-size: 36px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);
+}

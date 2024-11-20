@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-fill:#132431;" styleClass="splash-pane" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.dsassignment3_4.SplashScreenController">
+
+    <Rectangle fx:id="background" height="600.0" style="-fx-fill: #132431;" width="800.0" />
+
+    <Group fx:id="networkGroup">
+    </Group>
+
+    <Label fx:id="titleLabel" layoutX="300" layoutY="500" styleClass="title-label" text="FriendzClub" textFill="WHITE">
+      <font>
+         <Font size="36.0" />
+      </font></Label>
+   <Button fx:id="letsGoButton" disable="true" layoutX="300.0" layoutY="558.0" mnemonicParsing="false" onAction="#switchToRegisterScene" prefHeight="32.0" prefWidth="201.0" style="-fx-background-color: lightgreen;" text="Lets Get Started!" textFill="#0c3980">
+      <font>
+         <Font size="17.0" />
+      </font>
+   </Button>
+
+</AnchorPane>
