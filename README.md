@@ -54,3 +54,6 @@ Build your own Social Network Friend Recommendation System and dive into the wor
 
 
 Contact at hasnatrasool163@gmail.com for complete project with javafx gui frontend.
+
+##demo video
+https://www.linkedin.com/posts/hasnatrasool163_socialnetwork-datastructures-graphtheory-activity-7273927434654121984-e6Zo?utm_source=share&utm_medium=member_android
